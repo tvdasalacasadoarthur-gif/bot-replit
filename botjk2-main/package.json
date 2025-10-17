@@ -1,0 +1,23 @@
+{
+  "name": "tarefas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "@hapi/boom": "^10.0.0",
+    "@whiskeysockets/baileys": "^6.7.16",
+    "axios": "^1.8.4",
+    "body-parser": "^2.2.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "googleapis": "^148.0.0",
+    "moment-timezone": "^0.5.48",
+    "mongodb": "^6.15.0",
+    "pino": "^8.21.0",
+    "qrcode": "^1.5.4",
+    "qrcode-terminal": "^0.12.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
