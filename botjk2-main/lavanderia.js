@@ -335,15 +335,15 @@ if (texto === "9" || texto.includes("previsão") || texto.includes("previsao") |
 }
 
 
-    // Opção 10: Coleta de Lixo
+  // Opção 10: Coleta de Lixo
 if (texto === "10" || texto.includes("lixo") || texto.includes("coleta")) {
-  const hoje = moment.tz("America/Sao_Paulo").format("dddd"); // Dia da semana por extenso
+  const hoje = moment.tz("America/Sao_Paulo").format("dddd"); // Dia atual
   const coleta = `🗑️ *COLETA DE LIXO*
 
 📅 Hoje é *${hoje}*
 
 ♻️ *Lixo Reciclável:* Terça, Quinta e Sábado  
-🗑️ *Lixo Orgânico e Comum:* Terça, Quinta e Sábado  
+🗑️ *Lixo Orgânico e Comum:* Segunda, Quarta e Sexta  
 
 ⏰ *Horário:* Deixar o lixo até às 19h na área designada.
 
@@ -355,7 +355,11 @@ if (texto === "10" || texto.includes("lixo") || texto.includes("coleta")) {
   🟦 *Sacos azuis* ou *sacolas brancas de supermercado* → para recicláveis  
   ⬛ *Sacos pretos* → para lixo comum e orgânico  
 
-💚 *Separar o lixo corretamente ajuda o meio ambiente e valoriza o trabalho dos catadores!*`;
+🚮 *Importante:*  
+Caso os sacos de lixo estejam na *calçada*, o descarte será feito junto com os demais moradores,  
+pois a coleta ocorre *a cada 2 dias*. Dessa forma, evitamos acúmulo e mantemos o local limpo e organizado.  
+
+💚 *Separar e descartar corretamente ajuda o meio ambiente e facilita o trabalho dos catadores!*`;
 
   await sock.sendMessage(grupoId, { text: coleta });
   return;
